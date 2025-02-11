@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Delicious Restaurant</h1>
+        <p>Your favorite place for delightful meals!</p>
+    </header><br><br>
+    
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>At Delicious Restaurant, we serve a variety of mouth-watering dishes made from the freshest ingredients. Join us for a memorable dining experience!</p>
+            <img src="Delicious food.jpg" height="500px" width="500px" alt="Delicious food">
+        </section>
+
+        <section class="menu">
+            <h2>Our Menu</h2>
+            <ul>
+                <li>white sauce pasta - Rs.350</li>
+                <li>Margherita Pizza - Rs.450</li>
+                <li>fruit Salad - Rs.250</li>
+                <li>Grilled Salmon - Rs.500</li>
+                <li>Chocolate Lava Cake - Rs.250</li>
+            </ul>
+        </section>
+    </main> <br><br>
+    
+    
+  
+        <div class="Booking"><h2>Restaurant Reservation Form!</h2>
+            <h4>"Book your table at Delicious Restaurant – where every bite is a delight!"</h4>
+        </div><br><br>
+         <div>   
+            <form action="/submit-reservation" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" placeholder="Type here"   id="name" name="name" required><br><br>
+        
+               
+        
+                <label for="table-number">Table Number:</label><br>
+                <input type="number" placeholder="Select" id="table-number" name="table-number" min="1" required><br><br>
+
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="123-456-7890"><br><br>
+                
+                <button type="submit">Reserve Now</button>
+            </form><br>
+    </div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+     <footer>
+        <p>&copy; <span id="year"></span> Delicious Restaurant. All rights reserved.</p>
+    </footer>
+</body>
+</html>
