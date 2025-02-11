@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <style>
+        /* Button style */
+        #colorButton {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: lightblue;
+        }
+        
+        /* Calculator inputs and button styling */
+        input {
+            font-size: 16px;
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button that changes color -->
+    <button id="colorButton" onclick="changeColor()">Click me to change color!</button>
+
+    <script>
+        // Function to change button color
+        function changeColor() {
+            var button = document.getElementById("colorButton");
+            if (button.style.backgroundColor === "lightblue") {
+                button.style.backgroundColor = "lightcoral";
+            } else {
+                button.style.backgroundColor = "lightblue";
+            }
+        }
+    </script>
+
+    <hr>
+
+    <!-- Greeting message based on time -->
+    <script>
+        var hours = new Date().getHours();
+        var greeting = hours < 12 ? "Good Morning!" : hours < 18 ? "Good Afternoon!" : "Good Evening!";
+        alert(greeting);
+    </script>
+
+    <hr>
+
+    <!-- Basic Calculator -->
+    <h3>Basic Calculator</h3>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button onclick="addNumbers()">Add</button>
+    <h4>Result: <span id="result">0</span></h4>
+
+    <script>
+        // Function to add two numbers
+        function addNumbers() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var sum = num1 + num2;
+
+            // Display the result
+            document.getElementById("result").textContent = sum;
+        }
+    </script>
+
+</body>
+</html>
